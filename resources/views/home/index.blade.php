@@ -65,48 +65,16 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($data as $date => $d)
                 <tr>
-                    <td>1</td>
-                    <td>01/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $date->created_at }}</td>
+                    <td>{{ $d->total_selling }}</td>
+                    <td>{{ $d->total_cost }}</td>
+                    <td>{{  ($d->total_selling)+($d->total_cost) }}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>02/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>03/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>04/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>05/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>06/12/2022</td>
-                    <td>1000</td>
-                    <td>500</td>
-                    <td>500</td>
-                </tr>
+            @endforeach
+                
         </tbody>
     </table>
 
