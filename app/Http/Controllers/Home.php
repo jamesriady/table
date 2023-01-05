@@ -26,10 +26,10 @@ class Home extends Controller
 
         $result = [];
         foreach ($sales as $sale) {
-            $result[$sale->created_at]['total_selling'] = $sale->total_selling;
+            $result["$sale->created_at"]['total_selling'] = $sale->total_selling;
         }
         foreach ($fees as $fee) {
-            $result[$fee->created_at]['total_cost'] = $fee->total_cost;
+            $result["$fee->created_at"]['total_cost'] = $fee->total_cost;
         }
 
 
