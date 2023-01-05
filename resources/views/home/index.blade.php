@@ -68,10 +68,10 @@
             @foreach ($data as $date => $d)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $date->created_at }}</td>
-                    <td>{{ $d->total_selling }}</td>
-                    <td>{{ $d->total_cost }}</td>
-                    <td>{{  ($d->total_selling)+($d->total_cost) }}</td>
+                    <td>{{ $date }}</td>
+                    <td>{{ $d['total_selling'] }}</td>
+                    <td>{{ $d['total_cost'] }}</td>
+                    <td>{{ $d['total_selling'] + $d['total_cost'] }}</td>
                 </tr>
             @endforeach
                 
